@@ -17,7 +17,8 @@ class _CallerScreenState extends State<CallerScreen> {
   late RTCPeerConnection _peerConnection;
   MediaStream? _localStream;
   MediaStream? _remoteStream;
-  final _signalingServer = 'http://localhost:3000/api';
+  final _signalingServer = 'http://10.170.0.190:9999/webrtc-signaling-server/api/v1/web';
+  // final _signalingServer = 'http://localhost:9999/webrtc-signaling-server/api/v1/web';
   String? _roomId;
   bool _isCalling = false;
   bool _isMuted = false;
@@ -433,7 +434,7 @@ class _CallerScreenState extends State<CallerScreen> {
                     ),
                   Positioned(
                     right: 20,
-                    bottom: 20,
+                    top: 20,
                     width: 120,
                     height: 180,
                     child: ClipRRect(

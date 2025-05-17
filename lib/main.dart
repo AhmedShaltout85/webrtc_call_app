@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webrtc_call_app/caller_screen.dart';
+import 'package:webrtc_call_app/mobile_receiver_screen.dart';
 import 'package:webrtc_call_app/receiver_screen.dart';
 
 
@@ -62,6 +63,21 @@ class HomeScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               ),
               child: const Text('Start as Receiver'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MobileReceiverScreen()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+              ),
+              child: const Text('Start as Mobile Receiver'),
             ),
           ],
         ),
